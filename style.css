@@ -1,0 +1,8 @@
+.box{
+    height : 100px;
+    width : 100px ;
+    border : 1px solid rgb(238, 216, 216) ;
+    margin : 5px;
+    background : palegoldenrod;
+    text-align: center;
+}
