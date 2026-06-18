@@ -1,0 +1,21 @@
+//promise is a function which eventually the completion of task. It indicates eventually a completion of task .It is javascript object.
+
+ //let promise = new Promise((resolve,reject) => { })
+    //resolve is completion of task and reject is failure of task.
+//the 3 states of promise
+//1)pending: when function is in process
+//2)fullfilled: completion of task
+//3)rejected: 
+
+
+promise chaining: it is the concept in which no. of function is executed and its state will be rejected or reslove simultaneously.
+program for promise chaining 
+async /await: it is a aynchronous function which is built on top of promise.
+async keyword is used to return promise after completion of reject or resolve.
+await is used to give the pause of the execution of the post until the response will obtained.(wait here until the promise gies result then continue)
+
+Closure is a feature in javascript where an inner function can remember and can access the variables of outer functions even after the executing of outer function has finished
+
+//Curring is the feature of javascript in which there is passing of no. of arguments to a function is converted into a chain of function taking argument one by one by each function. 
+curring is a technique where a function with multiple arguments is transformed into a sequence of functions , each taking one argument at a time.
+//pizza order ex 

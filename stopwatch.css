@@ -28,11 +28,11 @@ body{
     margin-top: 20px;
 }
 
-.BTN{
+.BTN1{
     font-size: 20px;
     background: none;
     border: none;
-    color :rgb(3, 3, 19);
+    color :rgb(17, 176, 73);
     background-color: var(--clr);
     padding : 12px 24px;
     margin-inline: 12px;
