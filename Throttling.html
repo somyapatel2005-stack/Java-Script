@@ -1,0 +1,33 @@
+<!--Throttling : it means allowing a function to run only once in a fixed time interval, no matter how many times the event occurs.
+//runs the function at regular intervals while the action continues
+//-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Clicked me</button>
+    <script>
+    function throttle(func,delay){
+        let lasttime = 0;
+        return function(){
+            let currenttime = Date.now();
+             if(currenttime - lasttime >= delay){
+                 func();
+                 lasttime = currenttime;        }
+    }
+}
+function PrintMessage(){
+    console.log("Button Clicked at",new Date().toLocaleTimeString());
+}
+const throttledClick = throttle(PrintMessage,2000);
+document.getElementById("btn").addEventListener("click",throttledClick)
+
+    </script>
+    
+</body>
+</html>

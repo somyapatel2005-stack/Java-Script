@@ -78,9 +78,28 @@
                         name="gender"
                         id="rdFemale"
                         onchange="validateGender()">
-                        <label for=""rdFemale">Female</label>
-                        
+                        <label for="rdFemale">Female</label>
+                        &nbsp;&nbsp;
+                        <input type = "radio"
+                        name="gender"
+                        id="rdMale"
+                        onchange="validateGender()">
+                        <label for="rdMale">Male</label>
+                        <br>
+                        <small id="genderError"></small>
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">Upload PNG File</label>
+                        <input type="file"
+                        id="pic"
+                        class="form-control"
+                        onchange="validateFile()">
+                        <small id="fileError"></small>
+                    </div>
+                    <button type="submit"
+                    class="btn btn-success"
+                    onclick="returnvalidateForm()">
+                Sign Up</button>
                      
             
                 </form>

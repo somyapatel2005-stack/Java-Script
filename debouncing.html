@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--//Debouncing = It is that javascript technique it will stop calling of function again and again till the user continuously event trigger till that function will not execute. After stopping or completing of event trigger and after fix delay the function will call .
+//Debouncing means delay the execution of a function until the user stops performing an action for a certain time.  It prevents the functon from running again and again.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "text" id = "search" placeholder ="Please type here"/>
+    <script>
+        function debounce(func,delay){
+            let timer ;
+            return function(...arg){
+                clearTimeout(timer); //restart the timer 
+                timer = setTimeout(()=>{
+                    func(...arg)
+                },delay)
+            }
+        }
+        function search(query){
+console.log("Searching for",query)
+        }
+        let debouncedSearch = debounce(search, 500)
+        document.getElementById("search").addEventListener("input",
+            (event)=>{
+debouncedSearch(event.target.value) //joh type krre
+            }
+        )
+    </script>
+</body>
+</html>

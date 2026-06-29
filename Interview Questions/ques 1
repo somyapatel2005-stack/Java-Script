@@ -1,0 +1,71 @@
+q.1) What are javascripts datatype?
+and) Primitive and non primitive : primitive= int,String,Boolean,double, and non primitive are array ,linked list etc
+
+q.2) What are the differences between local and global variables? and how can having too many global variables negatively affect your code?
+ans) local variable is limited inside a function
+It can only works inside a program 
+Its memory is stack
+global varaible :  Its scope is entire program
+It can work on the whole program
+ Its memory is global
+it is hard to or negatively affects our code as it will be hard to remove the bug if their gets a bug as we wont know where it came from and and any part of the program can modify global variable.
+ q.3)what are differences between = ,== , === operators
+ans) = is used to assign a value whereas == is used to compare the values and === strictly compare two values ,it compares the value as well as its datatype nd other properties.
+
+q.4) how would you use escape characters to correctly log quotes in a string ? for ex. "HIM & I ARE GOOD FRIENDS"
+ans) to log quotes in a string we use \ before quotation marks. ""\ him & i  \"" 
+
+q.5)pop() and push() methods using the following array 
+let bootdotdev = ["the","best","coding","courses","ever","like","totally"]
+1.what would happen if you use bootdotdev.pop()
+ans) It removes the last element
+2.what would happen if you used bootdotdev.push("definitely","start","it"
+)
+ans) It adds more elements at the end of the array. meaning definitely , start and it will be added in the end.
+
+6)What are higher order functions and what are their benefits?
+ans) Higher order function are those functions which takes another function as an argument or return an another function.
+its benefit: the same functions can be used with diff callbacks
+makes program shorter and easier to understand
+
+7) write a loop that prints every number divisible by 3 from 1-200.
+for (let i =1; i <=200;i++) {
+    if (i % 3 === 0) {
+        console.log(i);
+    }
+}
+q.9) name all javascript boolean logical operators .
+ans) Logical AND && , logical OR || , logical NOT ! etc are js boolean logical operators
+q.10) how do break and continue statement differ and wheere would you use each?
+ans) break statement terminates or we can say end the loop whereas continue skips the particular iteration and starts another iteration. we use break when we want to stop the loop completely and we use continue when we want to skip a specific condition.
+
+q.11) what are the slice() and splice() methods and how . do they differently affect arrays?
+ans) slice() =  returns a copy or part of an array .
+it does not affect the array as it does not change the original array
+splice() = adds and removes,replaces  element in an array.
+it affects the array as it changes the array.
+
+12) what are arrow functions and what benefits do they bring in your code?
+ans) The arrow functions are shorter way to write functions . We use the => .
+const add=(a,b) => {
+	return a+b;
+}
+console.log(add(3,5));
+benefits: less code to write
+makes code easy to understand 
+
+
+14) what are differences between undeclared and undefined variables? 
+undefined : a variable is declared but a value is not assigned.
+ex.let x;
+undeclared : a variable is used without being declared
+ex. console.log(i); but i is not declared
+
+15}how would you submit A Form in javascript?
+
+16)when are you most likely to use the then method?
+ans) when we use promise. we use this when we want to see result,catches the success result is runs the next code.
+
+17)How would you write an object for a database containing the following persons details 
+jamie,age 24,with green eyes and id number 5000
+18) name 3 javascript frameworks and give a short description of what they are used for.s

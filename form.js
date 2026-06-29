@@ -81,5 +81,71 @@ function validateEmail() {
     return true;
 }
 function validationQualification() {
-    let qualification = document.getElementById("")
+    let qualification = document.getElementById("qualification").value;
+    let qualificationError = document.getElementById("qualificationError");
+
+  if (qualification === "0") {
+    qualificationError.innerHTML = "Please select qualification";
+    return false;
+  }
+
+  qualificationError.innerHTML = "";
+  return true;
+}
+
+function validateGender() {
+  let female = document.getElementById("rdFemale").checked;
+
+  let male = document.getElementById("rdMale").checked;
+
+  let genderError = document.getElementById("genderError");
+
+  if (!female && !male) {
+    genderError.innerHTML = "Please select gender";
+    return false;
+  }
+
+  genderError.innerHTML = "";
+  return true;
+}
+
+function validateFile() {
+  let fileObj = document.getElementById("pic");
+  let fileError = document.getElementById("fileError");
+
+  if (fileObj.files.length === 0) {
+    fileError.innerHTML = "Please upload a PNG file";
+    return false;
+  }
+
+  let fileName = fileObj.files[0].name;
+  let extension = fileName.substring(fileName.lastIndexOf(".")).toLowerCase();
+
+  if (extension !== ".png") {
+    fileError.innerHTML = "Only PNG files are allowed";
+    return false;
+  }
+
+  fileError.innerHTML = "";
+  return true;
+}
+
+function validateForm() {
+  let usernameStatus = validateUsername();
+  let passwordStatus = validatePassword();
+  let mobileStatus = validateMobile();
+  let emailStatus = validateEmail();
+  let qualificationStatus = validateQualification();
+  let genderStatus = validateGender();
+  let fileStatus = validateFile();
+
+  return (
+    usernameStatus &&
+    passwordStatus &&
+    mobileStatus &&
+    emailStatus &&
+    qualificationStatus &&
+    genderStatus &&
+    fileStatus
+  );
 }
